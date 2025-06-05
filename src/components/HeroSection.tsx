@@ -24,7 +24,7 @@ export default function HeroSection() {
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
             Энергия из
             <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent block">
-              отходов
+              Инновационная технология переработки отходов в чистую энергию
             </span>
           </h1>
 
