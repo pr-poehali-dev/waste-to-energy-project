@@ -23,8 +23,8 @@ export default function HeroSection() {
         <div className="mb-8">
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
             Энергия из
-            <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent block font-semibold text-lg">
-              Инновационная технология переработки отходов в чистую энергию
+            <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent block font-semibold text-2xl">
+              YTEO
             </span>
           </h1>
 
