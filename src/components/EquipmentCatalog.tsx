@@ -187,7 +187,7 @@ const EquipmentCatalog = () => {
                 <div className="flex space-x-3">
                   <Button
                     variant="outline"
-                    className="flex-1 bg-green-800 text-white hover:bg-green-700"
+                    className="flex-1 bg-green-500 text-white hover:bg-green-400"
                   >
                     <i className="fas fa-eye mr-2"></i>
                     Подробнее
