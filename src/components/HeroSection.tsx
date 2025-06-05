@@ -1,115 +1,79 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
+import Icon from "@/components/ui/icon";
+import ServicesCatalog from "./ServicesCatalog";
 
-const HeroSection = () => {
+export default function HeroSection() {
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+
+  const handleServicesClick = () => {
+    setIsServicesOpen(true);
+  };
+
   return (
-    <section
-      id="home"
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-yteo-azure to-white pt-20"
-    >
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-secondary/10 rounded-full blur-3xl"></div>
+    <section className="relative min-h-screen bg-gradient-to-br from-blue-900 via-slate-800 to-emerald-900 flex items-center justify-center overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.3),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.3),transparent_50%)]" />
       </div>
 
-      <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left animate-fade-in">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-yteo-text-primary mb-6 montserrat-bold leading-tight">
-                Инновационная технология переработки отходов в
-                <span className="text-primary"> чистую энергию</span>
-              </h1>
+      <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+        {/* Main Hero Content */}
+        <div className="mb-8">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Энергия из
+            <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent block">
+              отходов
+            </span>
+          </h1>
 
-              <p className="text-lg md:text-xl text-gray-600 mb-8 montserrat-regular leading-relaxed">
-                Революционная система переработки промышленных и энергетических
-                отходов. Преобразуем отходы в газ за несколько часов для
-                отопления и энергетики.
-              </p>
+          <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Современные технологии переработки отходов в энергию. Экологически
+            чистые решения для промышленности и городов.
+          </p>
+        </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
-                <Button variant="yteo" size="lg" className="text-lg px-8 py-4">
-                  <i className="fas fa-play mr-2"></i>
-                  Смотреть демо
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="text-lg px-8 py-4 bg-green-800 hover:bg-green-700 text-white border-green-800 hover:border-green-700"
-                  onClick={() => setShowCatalog(true)}
-                >
-                  <i className="fas fa-download mr-2"></i>
-                  Скачать каталог
-                </Button>
-              </div>
+        {/* Action Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <Button
+            size="lg"
+            className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300"
+            onClick={handleServicesClick}
+          >
+            <Icon name="Zap" className="mr-2" size={20} />
+            Наши услуги
+          </Button>
 
-              <div className="grid grid-cols-3 gap-6 text-center">
-                <div>
-                  <div className="text-3xl font-bold text-primary montserrat-bold">
-                    2-4
-                  </div>
-                  <div className="text-sm text-gray-600 montserrat-regular">
-                    часа переработки
-                  </div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary montserrat-bold">
-                    95%
-                  </div>
-                  <div className="text-sm text-gray-600 montserrat-regular">
-                    эффективность
-                  </div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary montserrat-bold">
-                    0
-                  </div>
-                  <div className="text-sm text-gray-600 montserrat-regular">
-                    вредных выбросов
-                  </div>
-                </div>
-              </div>
-            </div>
+          <Button
+            variant="outline"
+            size="lg"
+            className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm"
+          >
+            <Icon name="FileText" className="mr-2" size={20} />
+            Узнать больше
+          </Button>
+        </div>
 
-            <div className="relative animate-scale-in">
-              <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop&crop=center"
-                  alt="Установка YTEO для переработки отходов"
-                  className="w-full h-80 object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <h3 className="text-white font-bold text-xl mb-2 montserrat-bold">
-                    Установка YTEO в действии
-                  </h3>
-                  <p className="text-white/90 text-sm montserrat-regular">
-                    Переработка промышленных отходов в чистый газ
-                  </p>
-                </div>
-
-                <div className="absolute top-4 right-4 bg-white/90 rounded-full p-3">
-                  <i className="fas fa-play text-primary text-xl"></i>
-                </div>
-              </div>
-
-              <div className="absolute -bottom-6 -right-6 bg-secondary text-white p-6 rounded-xl shadow-lg">
-                <div className="flex items-center space-x-3">
-                  <i className="fas fa-fire text-2xl"></i>
-                  <div>
-                    <div className="font-bold montserrat-bold">1200°C</div>
-                    <div className="text-sm montserrat-regular">
-                      Температура переработки
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        {/* Stats Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="text-center">
+            <div className="text-4xl font-bold text-emerald-400 mb-2">500+</div>
+            <div className="text-slate-300">Проектов завершено</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-blue-400 mb-2">15+</div>
+            <div className="text-slate-300">Лет опыта</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-emerald-400 mb-2">99%</div>
+            <div className="text-slate-300">Довольных клиентов</div>
           </div>
         </div>
       </div>
+
+      {/* Services Catalog Dialog */}
+      <ServicesCatalog open={isServicesOpen} onOpenChange={setIsServicesOpen} />
     </section>
   );
-};
-
-export default HeroSection;
+}
