@@ -25,7 +25,7 @@ const Header = () => {
                 YTEO
               </h1>
               <p className="text-sm text-gray-600 montserrat-regular">
-                Эко-технологии
+                новые технологии экологического отопления
               </p>
             </div>
           </div>
