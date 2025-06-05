@@ -23,7 +23,7 @@ export default function HeroSection() {
         <div className="mb-8">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Энергия из
-            <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent block text-xs">
+            <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent block text-xl">
               отходов
             </span>
           </h1>
