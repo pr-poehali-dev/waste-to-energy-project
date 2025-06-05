@@ -185,7 +185,10 @@ const EquipmentCatalog = () => {
                 </div>
 
                 <div className="flex space-x-3">
-                  <Button variant="yteo" className="flex-1">
+                  <Button
+                    variant="outline"
+                    className="flex-1 bg-green-800 text-white hover:bg-green-700"
+                  >
                     <i className="fas fa-eye mr-2"></i>
                     Подробнее
                   </Button>
