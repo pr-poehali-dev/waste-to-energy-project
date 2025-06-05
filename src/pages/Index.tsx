@@ -1,12 +1,22 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from "react";
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import TechnologyOverview from "@/components/TechnologyOverview";
+import EquipmentCatalog from "@/components/EquipmentCatalog";
+import ContactForm from "@/components/ContactForm";
+import FAQSection from "@/components/FAQSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
-      </div>
+    <div className="min-h-screen">
+      <Header />
+      <HeroSection />
+      <TechnologyOverview />
+      <EquipmentCatalog />
+      <ContactForm />
+      <FAQSection />
+      <Footer />
     </div>
   );
 };
