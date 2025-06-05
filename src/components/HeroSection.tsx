@@ -35,7 +35,8 @@ const HeroSection = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="text-lg px-8 py-4"
+                  className="text-lg px-8 py-4 bg-green-800 hover:bg-green-700 text-white border-green-800 hover:border-green-700"
+                  onClick={() => setShowCatalog(true)}
                 >
                   <i className="fas fa-download mr-2"></i>
                   Скачать каталог
